@@ -65,7 +65,7 @@ public class ExempelProjekt implements EntryPoint {
   public void onModuleLoad() {
 	  
   	// Create Value Label
-	  valueLabel = new Label("value label");
+	  valueLabel = new Label("");
 	  
 	// Create table for stock data.
     flexTable.setText(0, 0, "Question");
