@@ -51,6 +51,7 @@ public class ExempelProjekt implements EntryPoint {
   private ArrayList<Button> buttonOperatorsList;
   private ArrayList<Button> buttonOthersList;
   private Label valueLabel;
+  private Label questionLabel;
   private String value = "";
   private String operandValue1 = "";
   private String operandValue2 = "";
@@ -66,6 +67,7 @@ public class ExempelProjekt implements EntryPoint {
 	  
   	// Create Value Label
 	  valueLabel = new Label("");
+	  questionLabel = new Label("");
 	  
 	// Create table for stock data.
     flexTable.setText(0, 0, "Question");
@@ -384,7 +386,8 @@ public class ExempelProjekt implements EntryPoint {
 		      // Add the calculation answer to the table.
 		      int row = flexTable.getRowCount();
 		      //flexTable.setText(row, 0, Double.toString(answer));
-		      flexTable.setText(row, 0, formatted);
+		      flexTable.setText(row, 0, operandValue1 + operator + operandValue2);
+		      flexTable.setText(row, 1, formatted);
 	    }
 			
 		
