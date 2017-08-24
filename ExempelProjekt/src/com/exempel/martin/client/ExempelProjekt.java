@@ -80,6 +80,7 @@ public class ExempelProjekt implements EntryPoint {
 	for(int i = 9; i > 0; i--) {
 	Button button = new Button(Integer.toString(i));
 		buttonDigitsList.add(button);
+		button.addStyleName("newWidth");
 		if(i < 4) {
 			//buttonsPanel1.add(button);
 			myGrid.setWidget(3, i-1, button);
@@ -107,6 +108,12 @@ public class ExempelProjekt implements EntryPoint {
 	buttonAC.addStyleName("newWidth");
 	buttonModulo.addStyleName("newWidth");
 	buttonDivision.addStyleName("newWidth");
+	buttonMultiplication.addStyleName("newWidth");
+	buttonAddition.addStyleName("newWidth");
+	buttonSubtraction.addStyleName("newWidth");
+	buttonAnswer.addStyleName("newWidth");
+	buttonDecimal.addStyleName("newWidth");
+	buttonZero.addStyleName("newWidth");
 	
 	myGrid.getCellFormatter().setWidth(1, 1, "10px");
 	
