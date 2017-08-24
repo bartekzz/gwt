@@ -58,6 +58,8 @@ public class ExempelProjekt implements EntryPoint {
   private String operator = "";
   private int counter = 0;
   
+  Button buttonAnswer;
+  
 
 	
   /**
@@ -105,7 +107,9 @@ public class ExempelProjekt implements EntryPoint {
 	Button buttonMultiplication = new Button("*");
 	Button buttonAddition = new Button("+");
 	Button buttonSubtraction = new Button("-");
-	Button buttonAnswer = new Button("=");
+	buttonAnswer = new Button("=");
+	
+	buttonAnswer.setEnabled(false);
 	
 	buttonAC.addStyleName("newWidth");
 	buttonModulo.addStyleName("newWidth");
@@ -213,6 +217,7 @@ public class ExempelProjekt implements EntryPoint {
 	    public void onClick(ClickEvent event) {
     		  toggleOperators(true);
 	      clearAllValues();
+	      buttonAnswer.setEnabled(false);
 	    }});
 	
 	buttonAnswer.addClickHandler(new ClickHandler() {
@@ -221,6 +226,7 @@ public class ExempelProjekt implements EntryPoint {
 	      addCalculation();
 	      toggleOperators(true);
 	      clearAllValues();
+	      buttonAnswer.setEnabled(false);
 	    }});
 	    
 	    // Listen for keyboard events on calculate button.
@@ -231,6 +237,7 @@ public class ExempelProjekt implements EntryPoint {
 	    	  addCalculation();
 	    	  toggleOperators(true);
 	    	  clearAllValues();
+	    	  buttonAnswer.setEnabled(false);
 	      }
 	    }
 	  });
@@ -274,6 +281,7 @@ public class ExempelProjekt implements EntryPoint {
 	  String operand = commaToDot(operand2);
 	  operandValue2 += operand;
 	  //Window.alert("Operand2: "+ operandValue2);
+	  buttonAnswer.setEnabled(true);
   }
   
 //Display value in valueLabel
